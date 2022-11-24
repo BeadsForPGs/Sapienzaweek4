@@ -1,0 +1,16 @@
+Write here your algorithm description (no code or personal info)
+Scrivi qui la descrizione del tuo algoritmo (senza codice o info personali)
+
+
+1)First of all we need to make tuple of all "words", which are in the file chain:
+    a) We reed the first file and make a list of all words in it, saving it in a list "txt"
+    b) We save the directory of the next file in var newDir = txt[0]
+    c) Save all values of the list without newDir (txt=txt[1:])
+    d) While chain is not closed (cycled) we add new words to the list "txt" , repeating steps a) b) c) with new file
+    e) When chain is closed we filter list to remove all '' cells
+2)We need to find the most frequent character at any position:
+    a) We find the max length of all words in the list "txt"
+    b) We create a dictionary of dictionaries "dict" with keys from 0 to max length of words
+    c) We go through all words in the list "txt" and for each word we go through all characters in it
+    d) For each character we add it to the dictionary "dict" with key = position of character in the word
+    e) Result is the most frequent character at any position as str
